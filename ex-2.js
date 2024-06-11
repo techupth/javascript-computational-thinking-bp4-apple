@@ -82,3 +82,18 @@ let orders = [
 ];
 
 // Start coding here
+function calculateTotalPaid(customerName, orders) {
+  let totalPaid = 0;
+  
+  for (let order of orders) {
+    if (order.customerName === customerName) {
+      totalPaid += order.productPrice * order.productQuantity;
+    }
+  }
+  
+  return totalPaid;
+}
+
+let customerName = "Birdie Shepland";
+let totalPaid = calculateTotalPaid(customerName, orders);
+console.log("Total paid amount of " + customerName + " : " + totalPaid.toLocaleString() + " Baht");

@@ -82,3 +82,17 @@ let orders = [
 ];
 
 // Start coding here
+function payWithjcbCard(orders) {
+  let jcbCard = [];
+
+  for (let order of orders) {
+    if (order.creditCardType === "jcb") {
+      jcbCard.push(order);
+    }
+  }
+  
+  return jcbCard;
+}
+
+let jcbCard = payWithjcbCard(orders);
+console.log(jcbCard);
